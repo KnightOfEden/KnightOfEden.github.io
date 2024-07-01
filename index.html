@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<h1 id="title"></h1>
+<p id="region"></p>
+<p id="platform"></p>
+<p id="players"></p>
+<p id="map"></p>
+<p id="wave"></p>
+<a id="link">Click here if not redirected</a>
 </body>
 <script>
-window.location.href = "roblox://experiences/start?placeId=12334109280&gameInstanceId=" + window.location.search.split("=").pop();
+const urlParams = new URLSearchParams(window.location.search);
+document.getElementById("title").innerHTML = "Redirecting to " + urlParams.name;
+document.getElementById("region").innerHTML = "Region: " + urlParams.region;
+document.getElementById("platform").innerHTML = "Platform: " + urlParams.platform;
+document.getElementById("players").innerHTML = "Players: " + urlParams.players;
+document.getElementById("map").innerHTML = "Map: " + urlParams.map;
+document.getElementById("wave").innerHTML = "Wave: " + urlParams.wave;
+const href = "roblox://experiences/start?placeId=12334109280&gameInstanceId=" + window.location.search.split("=").pop();
+document.getElementById("link").href = href
+window.location.href = href
+window.close();
 </script>
 </html>
