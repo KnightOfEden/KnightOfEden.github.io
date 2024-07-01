@@ -11,14 +11,13 @@
 </body>
 <script>
 const urlParams = new URLSearchParams(window.location.search);
-// document.getElementById("title").innerHTML = "Redirecting to " + urlParams.name;
-// document.getElementById("region").innerHTML = "<b>Region</b>: " + urlParams.region;
-// document.getElementById("platform").innerHTML = "<b>Platform</b>: " + urlParams.platform;
-// document.getElementById("players").innerHTML = "<b>Players</b>: " + urlParams.players;
-// document.getElementById("map").innerHTML = "<b>Map</b>: " + urlParams.map;
-// document.getElementById("wave").innerHTML = "<b>Wave</b>: " + urlParams.wave;
-// document.getElementById("link").href = urlParams.link
-// window.location.replace(urlParams.link);
-console.log(urlParams)
+document.getElementById("title").innerHTML = "Redirecting to " + urlParams.name;
+document.getElementById("region").innerHTML = "<b>Region</b>: " + urlParams.region;
+document.getElementById("platform").innerHTML = "<b>Platform</b>: " + urlParams.platform;
+document.getElementById("players").innerHTML = "<b>Players</b>: " + urlParams.players;
+document.getElementById("map").innerHTML = "<b>Map</b>: " + urlParams.map;
+document.getElementById("wave").innerHTML = "<b>Wave</b>: " + urlParams.wave;
+document.getElementById("link").href = urlParams.link
+window.location.replace(urlParams.link);
 </script>
 </html>
