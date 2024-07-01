@@ -17,9 +17,9 @@ document.getElementById("platform").innerHTML = "Platform: " + urlParams.platfor
 document.getElementById("players").innerHTML = "Players: " + urlParams.players;
 document.getElementById("map").innerHTML = "Map: " + urlParams.map;
 document.getElementById("wave").innerHTML = "Wave: " + urlParams.wave;
-const href = "roblox://experiences/start?placeId=12334109280&gameInstanceId=" + window.location.search.split("=").pop();
+const href = "roblox://experiences/start?placeId=12334109280&gameInstanceId=" + urlParams.gameInstanceId;
 document.getElementById("link").href = href
-window.location.href = href
+window.location.replace(href);
 window.close();
 </script>
 </html>
