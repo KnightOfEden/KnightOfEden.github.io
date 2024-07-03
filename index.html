@@ -2,21 +2,11 @@
 <html>
 <body>
 <h1 id="title"></h1>
-<p id="region"></p>
-<p id="platform"></p>
-<p id="players"></p>
-<p id="map"></p>
-<p id="wave"></p>
 <a id="link">Click here if not redirected</a>
 </body>
 <script>
 const urlParams = new URLSearchParams(window.location.search);
 document.getElementById("title").innerHTML = "Redirecting to " + urlParams.get("name");
-document.getElementById("region").innerHTML = "<b>Region</b>: " + urlParams.get("region");
-document.getElementById("platform").innerHTML = "<b>Platform</b>: " + urlParams.get("platform");
-document.getElementById("players").innerHTML = "<b>Players</b>: " + urlParams.get("players");
-document.getElementById("map").innerHTML = "<b>Map</b>: " + urlParams.get("map");
-document.getElementById("wave").innerHTML = "<b>Wave</b>: " + urlParams.get("wave");
 document.getElementById("link").href = urlParams.get("link")
 window.location.replace(urlParams.get("link"));
 </script>
