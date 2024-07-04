@@ -5,7 +5,8 @@
 <a id="link">Click here if not redirected</a>
 </body>
 <script>
-const url = "roblox://experiences/start?placeId=12334109280&gameInstanceId=" + window.location.href.split("/").pop();
+const urlParams = new URLSearchParams(window.location.search);
+const url = "roblox://experiences/start?placeId=12334109280&gameInstanceId=" + urlParams.get(id);
 document.getElementById("link").href = url
 window.location.replace(url);
 </script>
