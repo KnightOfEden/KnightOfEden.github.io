@@ -6,7 +6,7 @@
 </body>
 <script>
 const urlParams = new URLSearchParams(window.location.search);
-const url = "roblox://experiences/start?placeId=12334109280&gameInstanceId=" + urlParams.get("id");
+const url = urlParams.get("link");
 document.getElementById("link").href = url
 window.location.replace(url);
 </script>
